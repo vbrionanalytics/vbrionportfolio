@@ -1,0 +1,134 @@
+[
+  {
+    "id": "risk-governance",
+    "division": "Consulting Services",
+    "title": "Risk & Governance",
+    "shortDesc": "Enterprise-wide risk quantification, internal controls and board-level governance architecture.",
+    "icon": "ShieldCheck",
+    "offerings": [
+      "Enterprise Risk Management (ERM) Frameworks",
+      "Internal Controls & Audit Readiness",
+      "Board Advisory & Governance Metric Dashboards"
+    ]
+  },
+  {
+    "id": "legal-compliances",
+    "division": "Consulting Services",
+    "title": "Legal Compliances",
+    "shortDesc": "Automated statutory tracking, cross-border regulatory audit and proactive compliance shields.",
+    "icon": "Scale",
+    "offerings": [
+      "Statutory & Regulatory Mapping Systems",
+      "Cross-Jurisdictional Compliance Audits",
+      "Automated Policy Enforcement & Tracking"
+    ]
+  },
+  {
+    "id": "business-solutions",
+    "division": "Consulting Services",
+    "title": "Business Solutions",
+    "shortDesc": "Operational efficiency engineering, lean process transformation and sustainable scaling blueprints.",
+    "icon": "TrendingUp",
+    "offerings": [
+      "End-to-End Operational Bottleneck Diagnostics",
+      "Supply Chain & Resource Optimization",
+      "Revenue Operations Architecture"
+    ]
+  },
+  {
+    "id": "career-consulting",
+    "division": "Consulting Services",
+    "title": "Career Consulting",
+    "shortDesc": "Executive career progression strategies, skills radar assessment and leadership navigation.",
+    "icon": "Compass",
+    "offerings": [
+      "C-Suite & Senior Leadership Career Roadmaps",
+      "Domain Competency Gap Analysis",
+      "Strategic Executive Personal Branding"
+    ]
+  },
+  {
+    "id": "placement-consulting",
+    "division": "Consulting Services",
+    "title": "Placement Consulting",
+    "shortDesc": "Specialized executive search, high-impact talent pipeline matching and technical team building.",
+    "icon": "Users",
+    "offerings": [
+      "Precision Executive & Quant Talent Search",
+      "Bespoke Candidate Competency Assessments",
+      "Enterprise Talent Pipeline Architecture"
+    ]
+  },
+  {
+    "id": "technology-consulting",
+    "division": "Consulting Services",
+    "title": "Technology Consulting",
+    "shortDesc": "Modern IT architecture review, tech stack modernisation and enterprise AI adoption roadmaps.",
+    "icon": "Cpu",
+    "offerings": [
+      "Cloud Architecture Modernization & Cloud FinOps",
+      "Legacy Infrastructure Decoupling Blueprints",
+      "Enterprise AI Implementation Governance"
+    ]
+  },
+  {
+    "id": "fintech",
+    "division": "Analytical Solutions",
+    "title": "Fintech Solutions",
+    "shortDesc": "Algorithmic fraud detection, predictive credit models and real-time transaction intelligence.",
+    "icon": "LineChart",
+    "offerings": [
+      "Real-Time Fraud & Anomaly Detection Engines",
+      "Alternative Data Credit Scoring Models",
+      "Automated Payment Ledger Reconciliation"
+    ]
+  },
+  {
+    "id": "healthcare",
+    "division": "Analytical Solutions",
+    "title": "Healthcare Analytics",
+    "shortDesc": "Clinical predictive modelling, patient pathway optimization and medical operations BI.",
+    "icon": "Activity",
+    "offerings": [
+      "Patient Readmission & Triage Predictive Models",
+      "HIPAA/GDPR Compliant Health Lakehouse Design",
+      "Clinical Resource & Bed Occupancy Optimization"
+    ]
+  },
+  {
+    "id": "banking-solutions",
+    "division": "Analytical Solutions",
+    "title": "Banking Solutions",
+    "shortDesc": "Core banking risk analytics, liquidity stress-testing and customer lifetime value engines.",
+    "icon": "Building2",
+    "offerings": [
+      "Basel III/IV & Liquidity Stress Testing Tools",
+      "Customer Attrition & Deep LTV Propensity Models",
+      "Automated Anti-Money Laundering (AML) Triaging"
+    ]
+  },
+  {
+    "id": "education",
+    "division": "Analytical Solutions",
+    "title": "Education Analytics",
+    "shortDesc": "Adaptive learning telemetry, retention analytics and institutional outcome benchmarking.",
+    "icon": "GraduationCap",
+    "offerings": [
+      "Student Drop-Out Early Warning Systems",
+      "Curriculum Efficacy & Engagement Telemetry",
+      "Institutional Resource Allocation Forecasts"
+    ]
+  },
+  {
+    "id": "business-development",
+    "division": "Analytical Solutions",
+    "title": "Business Development Analytics",
+    "shortDesc": "Market foresight models, B2B intent engines and pipeline velocity predictive analytics.",
+    "icon": "BarChart3",
+    "offerings": [
+      "B2B Account Intent & Propensity Scoring",
+      "Dynamic Pricing & Elasticity Simulators",
+      "Territory Potential & Quota Optimization"
+    ]
+  }
+]
