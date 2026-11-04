@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { teamMembers } from '../../data/companyData';
-import { Users, Sparkles, Award, Code2 } from 'lucide-react';
+import { Users, Sparkles, Award, Code2, ExternalLink } from 'lucide-react';
 
 function TeamMemberCard({ member }) {
   const [imgError, setImgError] = useState(false);
@@ -102,6 +102,16 @@ function TeamMemberCard({ member }) {
           <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
             {member.bio}
           </p>
+          {member.portfolio && (
+            <a
+              href={member.portfolio}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 mt-4 text-xs font-bold text-indigo-600 hover:text-indigo-800 transition-colors"
+            >
+              View Portfolio <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          )}
         </div>
       </div>
     </div>

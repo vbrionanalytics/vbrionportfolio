@@ -216,6 +216,7 @@ export const teamMembers = [
     specialization: 'Full-Stack Platforms & Distributed Systems',
     bio: 'Engineering resilient full-stack systems, clean code architecture, database optimization, and high-performance applications.',
     avatar: '/team/prawin-kumar-n.jpg',
+    portfolio: 'https://prawin.vercel.app/',
   },
   {
     id: 5,
@@ -224,6 +225,7 @@ export const teamMembers = [
     specialization: 'Enterprise Software Architecture & Scalable Platforms',
     bio: 'Developing resilient software architectures, full-stack enterprise applications, database optimization, and high-performance services.',
     avatar: '/team/manoj-hariharan.jpg',
+    portfolio: 'https://portfolio-manoj-hariharan-t-xzek.vercel.app/',
   },
   {
     id: 6,
@@ -232,6 +234,7 @@ export const teamMembers = [
     specialization: 'Modern UI/UX & Responsive Web Applications',
     bio: 'Engineering interactive, responsive, and pixel-perfect web interfaces with modern user experience principles, animations, and design systems.',
     avatar: '/team/kungumanithish-k.jpg',
+    portfolio: 'https://nithishkportfolio.vercel.app/',
   },
   {
     id: 7,
