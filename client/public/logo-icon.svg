@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="vb-cyan-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF" />
+      <stop offset="50%" stop-color="#1AA3E0" />
+      <stop offset="100%" stop-color="#0B4C7A" />
+    </linearGradient>
+    <filter id="cyan-glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Monogram Hexagonal / Geometric Contour -->
+  <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" stroke="url(#vb-cyan-grad)" stroke-width="2.5" fill="rgba(16, 26, 46, 0.4)" />
+  
+  <!-- "V" Line Art -->
+  <path d="M 28 32 L 48 70 L 52 70 L 68 38" stroke="#00D4FF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#cyan-glow-filter)" />
+  
+  <!-- "B" Integrated Line Art & Telescope Beam -->
+  <path d="M 48 32 H 66 C 74 32 74 44 66 44 H 49" stroke="#1AA3E0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 49 44 H 68 C 76 44 76 60 66 60 H 45" stroke="#00D4FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Stylized Telescope & Observer / Stargazer motif -->
+  <!-- Telescope Tube aiming up-right at 45 deg -->
+  <line x1="56" y1="52" x2="78" y2="28" stroke="#00D4FF" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Lens Flare / Star / Vision point -->
+  <circle cx="82" cy="24" r="3" fill="#00D4FF" filter="url(#cyan-glow-filter)" />
+  <line x1="82" y1="18" x2="82" y2="30" stroke="#FFFFFF" stroke-width="1.5" />
+  <line x1="76" y1="24" x2="88" y2="24" stroke="#FFFFFF" stroke-width="1.5" />
+
+  <!-- Stylized Figure Observer Head -->
+  <circle cx="51" cy="56" r="3" fill="#C9D3E3" />
+  <!-- Observer Body / Arm leaning into telescope -->
+  <path d="M 50 60 C 51 64 54 66 57 66" stroke="#8B97AD" stroke-width="2" stroke-linecap="round" />
+</svg>
