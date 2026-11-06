@@ -105,7 +105,8 @@ async function renderHome(baseHtml) {
 
 function renderProject(baseHtml, project) {
   const url = `${SITE_URL}/project/${encodeURIComponent(project.id)}`;
-  const title = truncate(`${project.title} | Case Study | vbrion analytics`, 70);
+  const suffix = ' | vbrion analytics';
+  const title = truncate(project.title, 65 - suffix.length) + suffix;
   const description = truncate(project.summary || project.outcome, 158);
   const image = project.thumbnail || DEFAULT_IMAGE;
 
