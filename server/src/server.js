@@ -96,14 +96,48 @@ app.get('/api/health', (req, res) => {
 const clientDistPath = path.resolve(__dirname, '../../client/dist');
 if (fs.existsSync(clientDistPath)) {
   console.log(`[StaticHosting] Serving production client build from: ${clientDistPath}`);
-  app.use(express.static(clientDistPath));
 
-  // SPA fallback for all non-API GET requests
+  const seo = require('./seo');
+  const projectRepo = require('./repositories/projectRepository');
+  const baseHtml = fs.readFileSync(path.join(clientDistPath, 'index.html'), 'utf8');
+
+  const sendHtml = (res, status, html) => {
+    res.status(status)
+      .set('Content-Type', 'text/html; charset=UTF-8')
+      .set('Cache-Control', 'no-cache')
+      .send(html);
+  };
+
+  // Dynamic sitemap: home + every case-study page (replaces the old anchor-only file)
+  app.get('/sitemap.xml', async (req, res, next) => {
+    try {
+      res.type('application/xml').set('Cache-Control', 'public, max-age=3600').send(await seo.buildSitemap());
+    } catch (err) { next(err); }
+  });
+
+  // Hashed build assets are immutable; everything else gets a short cache.
+  app.use('/assets', express.static(path.join(clientDistPath, 'assets'), { maxAge: '1y', immutable: true }));
+  app.use(express.static(clientDistPath, { index: false, maxAge: '1h' }));
+
+  app.get('/', async (req, res, next) => {
+    try { sendHtml(res, 200, await seo.renderHome(baseHtml)); } catch (err) { next(err); }
+  });
+
+  // Case-study pages: unique title/description/schema per project; real 404 for unknown ids
+  app.get('/project/:id', async (req, res, next) => {
+    try {
+      const project = await projectRepo.getById(req.params.id);
+      if (!project) return sendHtml(res, 404, seo.renderNotFound(baseHtml, req.path));
+      sendHtml(res, 200, seo.renderProject(baseHtml, project));
+    } catch (err) { next(err); }
+  });
+
+  // Any other non-API URL is a genuine 404 (the client still redirects visitors home)
   app.get('*', (req, res, next) => {
     if (req.path.startsWith('/api')) {
       return next();
     }
-    res.sendFile(path.join(clientDistPath, 'index.html'));
+    sendHtml(res, 404, seo.renderNotFound(baseHtml, req.path));
   });
 }
 

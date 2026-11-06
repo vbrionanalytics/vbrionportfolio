@@ -33,6 +33,14 @@ export default function ProjectDetailPage() {
     return () => { isMounted = false; };
   }, [id]);
 
+  // Keep the browser tab title in sync with the case study (the server injects the same for crawlers)
+  useEffect(() => {
+    if (!project?.title) return undefined;
+    const previous = document.title;
+    document.title = `${project.title} | Case Study | vbrion analytics`;
+    return () => { document.title = previous; };
+  }, [project]);
+
   const handleShare = () => {
     if (navigator.clipboard) {
       navigator.clipboard.writeText(window.location.href);
