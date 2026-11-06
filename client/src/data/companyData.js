@@ -251,6 +251,7 @@ export const teamMembers = [
     specialization: 'Deep Learning & Predictive AI',
     bio: 'Developing predictive intelligence models, advanced neural workflows, computer vision, and generative AI enterprise integrations.',
     avatar: '/team/manoj-anbalagan.jpg',
+    portfolio: 'https://manoj-a.vercel.app/',
   }
 ];
 
