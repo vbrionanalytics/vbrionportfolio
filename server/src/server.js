@@ -1,4 +1,5 @@
-require('dotenv').config();
+// Load server/.env by absolute path so it works regardless of the process working directory (PM2, Docker, etc.)
+require('dotenv').config({ path: require('path').resolve(__dirname, '../.env') });
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
