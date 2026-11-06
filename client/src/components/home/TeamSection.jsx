@@ -4,7 +4,9 @@ import { Users, Sparkles, Award, Code2, ExternalLink } from 'lucide-react';
 
 function TeamMemberCard({ member }) {
   const [imgError, setImgError] = useState(false);
-  const isDirector = member.role?.toLowerCase().includes('director');
+  const isDirector =
+    member.role?.toLowerCase().includes('director') ||
+    member.role?.toLowerCase().includes('leadership');
   const isHead = member.role?.toLowerCase().includes('head');
   const isLead = member.role?.toLowerCase().includes('lead');
 

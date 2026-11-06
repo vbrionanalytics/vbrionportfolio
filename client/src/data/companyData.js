@@ -195,6 +195,14 @@ export const teamMembers = [
   },
   {
     id: 2,
+    name: 'G Chellammal',
+    role: 'Leadership, Finance and Operations',
+    specialization: 'Financial Strategy & Operational Excellence',
+    bio: 'Overseeing financial strategy, corporate operations, and governance to ensure sustainable growth and seamless delivery across all practices.',
+    avatar: '/team/chellammal-g.jpg',
+  },
+  {
+    id: 3,
     name: 'Vaishnavi C',
     role: 'Business Head',
     specialization: 'Enterprise Solutions & Client Alliances',
@@ -202,7 +210,7 @@ export const teamMembers = [
     avatar: null,
   },
   {
-    id: 3,
+    id: 4,
     name: 'Nesarajan PN',
     role: 'Software Development Lead',
     specialization: 'Systems Architecture & Technical Leadership',
@@ -210,7 +218,7 @@ export const teamMembers = [
     avatar: '/team/nesarajan-pn.png',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Prawin Kumar N',
     role: 'Software Development Engineer',
     specialization: 'Full-Stack Platforms & Distributed Systems',
@@ -219,7 +227,7 @@ export const teamMembers = [
     portfolio: 'https://prawin.vercel.app/',
   },
   {
-    id: 5,
+    id: 6,
     name: 'Manoj Hariharan',
     role: 'Software Engineer',
     specialization: 'Enterprise Software Architecture & Scalable Platforms',
@@ -228,7 +236,7 @@ export const teamMembers = [
     portfolio: 'https://portfolio-manoj-hariharan-t-xzek.vercel.app/',
   },
   {
-    id: 6,
+    id: 7,
     name: 'Kungumanithish K',
     role: 'Frontend Developer',
     specialization: 'Modern UI/UX & Responsive Web Applications',
@@ -237,7 +245,7 @@ export const teamMembers = [
     portfolio: 'https://nithishkportfolio.vercel.app/',
   },
   {
-    id: 7,
+    id: 8,
     name: 'Manoj Anbalagan',
     role: 'AI Engineer',
     specialization: 'Deep Learning & Predictive AI',
