@@ -34,7 +34,7 @@ export const siteConfig = {
     linkedin: 'https://linkedin.com/company/vbrion',
     twitter: 'https://twitter.com/vbrion_ai',
     github: 'https://github.com/vbrion',
-    instagram: 'https://instagram.com/vbrion.analytics',
+    instagram: 'https://www.instagram.com/vbrionanalytics/',
   },
 
   featureFlags: {
