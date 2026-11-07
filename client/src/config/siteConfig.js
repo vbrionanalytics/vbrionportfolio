@@ -32,7 +32,7 @@ export const siteConfig = {
 
   socials: {
     linkedin: 'https://linkedin.com/company/vbrion',
-    twitter: 'https://twitter.com/vbrion_ai',
+    twitter: 'https://x.com/VBRIONAnalytics',
     github: 'https://github.com/vbrionanalytics',
     instagram: 'https://www.instagram.com/vbrionanalytics/',
     youtube: 'https://www.youtube.com/@Vbrion_Analytics',
