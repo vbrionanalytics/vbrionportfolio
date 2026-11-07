@@ -5,7 +5,7 @@ import BrandLogo from '../common/BrandLogo';
 import siteConfig from '../../config/siteConfig';
 import { servicesData } from '../../data/servicesData';
 import { Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
-import { LinkedInIcon, TwitterXIcon, GitHubIcon, InstagramIcon, FacebookIcon } from '../common/SocialIcons';
+import { LinkedInIcon, TwitterXIcon, GitHubIcon, InstagramIcon, FacebookIcon, YouTubeIcon } from '../common/SocialIcons';
 import NewsletterSubscription from '../common/NewsletterSubscription';
 
 export default function Footer() {
@@ -77,6 +77,15 @@ export default function Footer() {
                 aria-label="Facebook"
               >
                 <FacebookIcon className="w-4 h-4" />
+              </a>
+              <a
+                href={siteConfig.socials.youtube}
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 rounded-xl bg-white hover:bg-indigo-50 hover:text-indigo-600 text-slate-700 flex items-center justify-center border border-slate-200 shadow-sm transition-all"
+                aria-label="YouTube"
+              >
+                <YouTubeIcon className="w-4 h-4" />
               </a>
             </div>
           </div>
