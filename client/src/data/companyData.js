@@ -224,7 +224,7 @@ export const teamMembers = [
     role: 'Software Development Engineer',
     specialization: 'Full-Stack Platforms & Distributed Systems',
     bio: 'Engineering resilient full-stack systems, clean code architecture, database optimization, and high-performance applications.',
-    avatar: '/team/prawin-kumar-n.jpg',
+    avatar: '/team/prawin-kumar-n-v2.jpg',
     portfolio: 'https://prawin.vercel.app/',
   },
   {
