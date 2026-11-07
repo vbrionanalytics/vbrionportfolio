@@ -95,3 +95,27 @@ export async function getCtaStats() {
   }
 }
 
+/**
+ * SEO landing content (services, locations, blog) served by /api/pages
+ */
+export async function getContentPage(type, slug) {
+  try {
+    const res = await fetch(`${API_BASE}/pages/${type}/${slug}`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data?.data || null;
+  } catch (err) {
+    return null;
+  }
+}
+
+export async function getContentIndex() {
+  try {
+    const res = await fetch(`${API_BASE}/pages`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data?.data || null;
+  } catch (err) {
+    return null;
+  }
+}

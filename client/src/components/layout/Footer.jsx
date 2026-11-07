@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { serviceLinks, locationLinks } from '../../data/seoPages';
 import BrandLogo from '../common/BrandLogo';
 import siteConfig from '../../config/siteConfig';
 import { servicesData } from '../../data/servicesData';
@@ -132,6 +134,27 @@ export default function Footer() {
                 </span>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Solutions, locations & blog: internal links for visitors and search engines */}
+        <div className="grid sm:grid-cols-3 gap-8 py-8 mb-6 border-t border-slate-200 text-xs sm:text-sm">
+          <div className="sm:col-span-2">
+            <h4 className="font-montserrat font-bold text-sm text-slate-900 uppercase tracking-wider mb-3">Solutions</h4>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2">
+              {serviceLinks.map((s) => (
+                <li key={s.slug}><Link to={`/services/${s.slug}`} className="hover:text-indigo-600 transition-colors">{s.name}</Link></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-montserrat font-bold text-sm text-slate-900 uppercase tracking-wider mb-3">Where we work</h4>
+            <ul className="space-y-2">
+              {locationLinks.map((l) => (
+                <li key={l.slug}><Link to={`/software-company-in/${l.slug}`} className="hover:text-indigo-600 transition-colors">Software company in {l.city}</Link></li>
+              ))}
+              <li><Link to="/blog" className="hover:text-indigo-600 transition-colors font-semibold">Blog &amp; guides</Link></li>
+            </ul>
           </div>
         </div>
 

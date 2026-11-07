@@ -20,6 +20,8 @@ import TeamSection from './components/home/TeamSection';
 import CareersCtaBanner from './components/home/CareersCtaBanner';
 import ContactSection from './components/home/ContactSection';
 import ProjectDetailPage from './pages/ProjectDetailPage';
+import ContentPage from './pages/ContentPage';
+import BlogIndexPage from './pages/BlogIndexPage';
 
 function HomePage({ selectedServiceForContact, onSelectService }) {
   return (
@@ -98,6 +100,12 @@ export default function App() {
 
           {/* Dynamic Dedicated Case Study Detail Pages */}
           <Route path="/project/:id" element={<ProjectDetailPage />} />
+
+          {/* SEO landing pages */}
+          <Route path="/services/:slug" element={<ContentPage type="services" />} />
+          <Route path="/software-company-in/:slug" element={<ContentPage type="locations" />} />
+          <Route path="/blog" element={<BlogIndexPage />} />
+          <Route path="/blog/:slug" element={<ContentPage type="blog" />} />
 
           {/* Catch-all redirect to Home */}
           <Route path="*" element={<Navigate to="/" replace />} />

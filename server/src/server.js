@@ -77,6 +77,7 @@ app.use('/api/cta', ctaRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/services', serviceRoutes);
 app.use('/api/ai', aiRoutes);
+app.use('/api/pages', require('./routes/pageRoutes'));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
@@ -130,6 +131,33 @@ if (fs.existsSync(clientDistPath)) {
       if (!project) return sendHtml(res, 404, seo.renderNotFound(baseHtml, req.path));
       sendHtml(res, 200, seo.renderProject(baseHtml, project));
     } catch (err) { next(err); }
+  });
+
+  // SEO landing pages: services, locations, blog (unique meta + crawlable content per URL)
+  const notFound = (res, req) => sendHtml(res, 404, seo.renderNotFound(baseHtml, req.path));
+
+  app.get('/services/:slug', async (req, res, next) => {
+    try {
+      const page = seo.getServicePage(req.params.slug);
+      if (!page) return notFound(res, req);
+      sendHtml(res, 200, await seo.renderServicePage(baseHtml, page));
+    } catch (err) { next(err); }
+  });
+
+  app.get('/software-company-in/:slug', async (req, res, next) => {
+    try {
+      const page = seo.getLocationPage(req.params.slug);
+      if (!page) return notFound(res, req);
+      sendHtml(res, 200, await seo.renderLocationPage(baseHtml, page));
+    } catch (err) { next(err); }
+  });
+
+  app.get('/blog', (req, res) => sendHtml(res, 200, seo.renderBlogIndex(baseHtml)));
+
+  app.get('/blog/:slug', (req, res) => {
+    const post = seo.getBlogPost(req.params.slug);
+    if (!post) return notFound(res, req);
+    sendHtml(res, 200, seo.renderBlogPost(baseHtml, post));
   });
 
   // Any other non-API URL is a genuine 404 (the client still redirects visitors home)
