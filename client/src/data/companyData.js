@@ -216,6 +216,7 @@ export const teamMembers = [
     specialization: 'Systems Architecture & Technical Leadership',
     bio: 'Overseeing technology architecture, engineering delivery, agile sprints, and software excellence across mission-critical enterprise systems.',
     avatar: '/team/nesarajan-pn.png',
+    portfolio: 'https://vbrion.com/nesarajan/',
   },
   {
     id: 5,
